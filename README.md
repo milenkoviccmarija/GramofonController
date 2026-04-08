@@ -1,7 +1,34 @@
 # GramofonController
-Upravljanje maketom gramofona sa jednim ulazom i dva izlaza.
-Radi u dva moda: brojanje nitni i pomeranje gramofona.
-Ulazi: Detekcija nitne (P0_1), Detekcija kruga (P0_2) | Izlaz: Start sistema (P2_0)
-Stanja: STOP, READY, BROJANJE, POMERANJE
-Serijske komande: START, STOP, POMERAJ X
-LCD prikazuje trenutno stanje i broj nitni/vreme.
+
+Embedded sistem za upravljanje gramofonom sa detekcijom senzora, više režima rada i LCD prikazom.
+
+🔌 Ulazi / Izlaz
+
+ `P0_1` – detekcija nitne
+ `P0_2` – detekcija kruga
+ `P2_0` – start sistema (motor)
+ 
+⚙️ Stanja
+
+ `STOP`
+ `READY`
+ `BROJANJE`
+ `POMERANJE`
+
+📡 Serijska komunikacija
+
+`parsiraj_poruku()`
+
+Prioritet:
+```
+STOP → START → IZBOR MODA
+```
+
+🧩 Moduli
+
+ `display` – LCD prikaz
+ `gpio` – upravljanje pinovima 
+ `timer1` – merenje vremena
+ `serijska` – UART komunikacija
+ `gramofon` – logika sistema
+
