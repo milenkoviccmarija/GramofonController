@@ -17,8 +17,6 @@ Embedded sistem za upravljanje gramofonom sa detekcijom senzora, više režima r
 
 📡 Serijska komunikacija
 
-`parsiraj_poruku()`
-
 Prioritet:
 ```
 STOP → START → IZBOR MODA
