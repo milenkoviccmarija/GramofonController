@@ -1,32 +1,32 @@
 # GramofonController
 
-Embedded sistem za upravljanje gramofonom sa detekcijom senzora, više režima rada i LCD prikazom.
+Embedded system for controlling a gramophone, featuring sensor detection, multiple operating modes, and an LCD display.
 
-🔌 Ulazi / Izlaz
+🔌 Inputs / Outputs
 
- `P0_1` – detekcija nitne
- `P0_2` – detekcija kruga
- `P2_0` – start sistema (motor)
+`P0_1` – Rivet detection  
+`P0_2` – Circle detection  
+`P2_0` – System start (motor)
  
-⚙️ Stanja
+⚙️ States
 
  `STOP`
  `READY`
  `BROJANJE`
  `POMERANJE`
 
-📡 Serijska komunikacija
+📡 Serial Communication
 
-Prioritet:
+Priority:
 ```
 STOP → START → IZBOR MODA
 ```
 
-🧩 Moduli
+🧩 Modules
 
- `display` – LCD prikaz
- `gpio` – upravljanje pinovima 
- `timer1` – merenje vremena
- `serijska` – UART komunikacija
- `gramofon` – logika sistema
+`display` – LCD display handling  
+`gpio` – Pin control  
+`timer1` – Time measurement  
+`serial` – UART communication  
+`gramophone` – Core system logic  
 
